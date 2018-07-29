@@ -1,0 +1,263 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
+html {
+  font-size: 62.5%;
+  background-color: #ccc; }
+
+header {
+  position: relative; }
+
+body {
+  font-family: 'Noto Sans Japanese', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Verdana, 'ＭＳ Ｐゴシック', sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #787878;
+  letter-spacing: 0.18em;
+  position: relative;
+  background: #f9f8f6;
+  max-width: 960px;
+  margin: auto; }
+
+.screen {
+  display: none;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: 90; }
+
+nav {
+  position: fixed;
+  right: 0;
+  z-index: 100; }
+  @media (min-width: 960px) {
+    nav {
+      width: 960px;
+      left: calc(50% - 960px/2); } }
+
+.header-icon__ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 6vh;
+  margin: 2vh 0px 0px 0px;
+  padding: 0px 2.5vw;
+  z-index: 100;
+  box-sizing: border-box; }
+  @media (min-width: 960px) {
+    .header-icon__ul {
+      padding: 0px 20px; } }
+  .header-icon__ul li {
+    margin-right: 10px; }
+
+.header-icon__a {
+  color: #dbdada;
+  font-size: 20px;
+  font-size: 2rem; }
+  .header-icon__a:hover {
+    color: #6d6c6c; }
+  @media (min-width: 500px) {
+    .header-icon__a {
+      font-size: 26px;
+      font-size: 2.6rem; } }
+
+h1 {
+  font-size: 0px;
+  height: 52vh;
+  margin: 0px 50px 0px 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8vh 0 0 0; }
+
+.container {
+  display: none;
+  position: fixed;
+  z-index: 95;
+  width: 95%;
+  height: 96vh;
+  top: 2vh;
+  left: 2.5%;
+  bottom: 2vh;
+  right: 2.5%;
+  padding: 0px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  border-radius: 10px; }
+  @media (min-width: 960px) {
+    .container {
+      width: 960px;
+      left: calc(50% - 960px/2); } }
+
+.profile-content {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  margin: 6vh 0 0 0; }
+
+.sp-profile-img {
+  text-align: center; }
+
+.sp-profile-img__img {
+  height: 25vh;
+  width: auto;
+  object-fit: cover;
+  object-position: 0% 0%;
+  margin-top: 3vh; }
+
+.pc-profile-img {
+  display: none; }
+
+.profile-txt {
+  display: flex;
+  justify-content: space-around;
+  margin: 5% 0px 0px 0px; }
+  .profile-txt p {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    line-height: 3em;
+    font-size: 2.2vh; }
+    .profile-txt p span {
+      letter-spacing: 0.1em;
+      font-size: 1.6vh; }
+
+.profile-contact {
+  margin-top: auto; }
+
+.profile-contact__ul {
+  list-style: none;
+  display: flex;
+  margin: 0px 0px 10px 10px;
+  padding: 0px; }
+  .profile-contact__ul li {
+    margin-right: 10px; }
+  .profile-contact__ul a {
+    color: #6d6c6c;
+    font-size: 20px;
+    font-size: 2rem; }
+    .profile-contact__ul a:hover {
+      color: #dbdada; }
+    @media (min-width: 500px) {
+      .profile-contact__ul a {
+        font-size: 26px;
+        font-size: 2.6rem; } }
+
+.albumlog-content {
+  display: flex;
+  flex-direction: column;
+  padding: 6vh 0 3vh 0;
+  height: 100%;
+  justify-content: space-around;
+  box-sizing: border-box; }
+
+.albumlog-txt {
+  margin: 1vh 2vw;
+  height: 50vh;
+  overflow: scroll;
+  padding-bottom: 10px;
+  /*スクロールバー全体*/
+  /*スクロールバーの動く部分*/ }
+  .albumlog-txt::-webkit-scrollbar {
+    width: 0px;
+    height: 3px;
+    background: #ddd; }
+  .albumlog-txt::-webkit-scrollbar-thumb {
+    background-color: #ccc; }
+  .albumlog-txt p {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    line-height: 2.0em;
+    font-size: 14px;
+    font-size: 1.4rem;
+    height: 95%; }
+    .albumlog-txt p span {
+      letter-spacing: 0.1em;
+      font-size: 1.6vh; }
+    @media (min-width: 500px) {
+      .albumlog-txt p {
+        font-size: 16px;
+        font-size: 1.6rem; } }
+
+.albumlog-cover {
+  text-align: center; }
+
+.cover-box {
+  height: 28vh;
+  overflow: hidden; }
+  .cover-box img {
+    height: 100%; }
+
+.cover-02 {
+  display: none; }
+
+.pc-title-img {
+  display: none; }
+  @media (min-width: 500px) {
+    .pc-title-img {
+      display: block; } }
+
+.sp-title-img {
+  text-align: right; }
+  @media (min-width: 500px) {
+    .sp-title-img {
+      display: none; } }
+
+.top-cover__img {
+  height: 40vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0% 0%; }
+  @media (min-width: 500px) {
+    .top-cover__img {
+      height: unset;
+      object-fit: unset;
+      object-position: unset; } }
+
+@media (min-width: 500px) {
+  .title-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between; } }
+
+@media (min-width: 500px) {
+  .top-cover {
+    margin-top: 30vh; } }
+
+.slider-pro p {
+  writing-mode: vertical-rl;
+  height: 50vh; }
+  @media (min-width: 550px) {
+    .slider-pro p {
+      font-size: 20px;
+      height: 35vh; } }
+
+.heightFix {
+  overflow: hidden;
+  height: 95vh;
+  position: relative;
+  margin-bottom: 100px; }
+  @media (min-width: 550px) {
+    .heightFix {
+      height: 100vh; } }
+  .heightFix::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    margin: 0 auto;
+    text-align: center;
+    background-image: -webkit-linear-gradient(left, transparent, #777 25%, #777 75%, transparent);
+    background-image: linear-gradient(to right, transparent, #777 25%, #777 75%, transparent); }
+
+.pagetop-btn {
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */

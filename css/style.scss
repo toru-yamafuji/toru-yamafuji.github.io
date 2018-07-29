@@ -1,0 +1,350 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+@mixin fontsize($size:24, $base:10){
+    font-size:$size + px;
+    font-size:($size/$base) * 1rem;
+}
+$icon:#dbdada;
+$icon__over:#6d6c6c;
+$title:#787878;
+$text:#787878;
+$container:#fff;
+$background:#f9f8f6;
+
+
+
+html{
+    font-size:62.5%;
+    background-color:#ccc;
+}
+
+
+header{
+  position:relative;
+}
+
+body {
+  font-family: 'Noto Sans Japanese', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Verdana, 'ＭＳ Ｐゴシック', sans-serif;
+  @include fontsize(16);
+  color:$text;
+  letter-spacing:0.18em;
+  position:relative;
+  background:$background;
+  max-width:960px;
+  margin:auto;
+}
+
+.screen{
+  display:none;
+  background-color:#000;
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity:0.2;
+  z-index:90;
+}
+
+nav {
+    position: fixed;
+    right: 0;
+    z-index: 100;
+    @media(min-width:960px){
+        width: 960px;
+        left: calc(50% - 960px/2);
+    }
+}
+
+
+.header-icon__ul{
+  list-style:none;
+  display:flex;
+  justify-content:flex-end;
+  width: 100%;
+  height:6vh;
+  margin: 2vh 0px 0px 0px;
+  padding:0px 2.5vw;
+  z-index:100;
+  box-sizing:border-box;
+    @media(min-width:960px){
+      padding: 0px 20px;
+  }
+  
+    li{
+      margin-right:10px;
+    }
+}
+
+.header-icon__a{
+  color:$icon;
+  @include fontsize(20);
+  
+  &:hover{
+    color:$icon__over;
+  }
+  @media(min-width:500px){
+    @include fontsize(26);
+  }
+  
+}
+    
+
+h1{
+  font-size:0px;
+  height:52vh;
+  margin: 0px 50px 0px 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8vh 0 0 0
+}
+
+//profile-area/////////////////////////////////////////////
+
+.container{
+  display:none;
+  position:fixed;
+  z-index:95;
+  width: 95%;
+  height: 96vh;
+    top: 2vh;
+    left: 2.5%;
+    bottom: 2vh;
+    right: 2.5%;
+  padding:0px 10px;
+  background-color:rgba(255,255,255,0.9);
+  box-sizing:border-box;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  
+  @media(min-width:960px){
+    width:960px;
+    left:calc(50% - 960px/2);
+  }
+}
+
+.profile-content{
+  height:90vh;
+  display:flex;
+  flex-direction:column;
+  margin:6vh 0 0 0;
+}
+
+
+
+.sp-profile-img{
+  text-align:center;
+}
+
+.sp-profile-img__img{
+  height:25vh;
+  width:auto;
+  object-fit:cover;
+  object-position:0% 0%;
+  margin-top:3vh;
+}
+
+.pc-profile-img{
+  display:none;
+}
+
+
+
+
+.profile-txt{
+  display: flex;
+  justify-content: space-around;
+  margin: 5% 0px 0px 0px;
+  p{
+    -ms-writing-mode: tb-rl;
+    writing-mode:vertical-rl;
+    line-height:3em;
+    font-size:2.2vh;
+    span{
+      letter-spacing:0.1em;
+      font-size:1.6vh;
+    }
+  }
+}
+
+.profile-contact{
+  margin-top: auto;
+}
+
+
+
+.profile-contact__ul{
+  list-style:none;
+  display:flex;
+  margin: 0px 0px 10px 10px;
+  padding: 0px;
+    li{
+      margin-right:10px;
+    }
+    
+    a{
+      color:$icon__over;
+      @include fontsize(20);
+      
+      &:hover{
+        color:$icon;
+      }
+      @media(min-width:500px){
+        @include fontsize(26);
+      }
+    }
+}
+
+
+
+//albumlog-area/////////////////////////////////////////////
+
+
+
+.albumlog-content{
+    display: flex;
+    flex-direction: column;
+    padding: 6vh 0 3vh 0;
+    height: 100%;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.albumlog-txt{
+    margin: 1vh 2vw;
+    height: 50vh;
+    overflow: scroll;
+    padding-bottom:10px;
+    
+    /*スクロールバー全体*/
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 3px;
+    background:#ddd;
+  }
+  
+  /*スクロールバーの動く部分*/
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+  }
+    
+  p{
+    -ms-writing-mode: tb-rl;
+    writing-mode:vertical-rl;
+    line-height:2.0em;
+    @include fontsize(14);
+    height:95%;
+    span{
+      letter-spacing:0.1em;
+      font-size:1.6vh;
+    }
+    @media(min-width:500px){
+      @include fontsize(16);
+    }
+  }
+  
+}
+
+.albumlog-cover{
+  text-align:center;
+}
+
+.cover-box{
+  height:28vh;
+  overflow:hidden;
+  img{
+    height:100%;
+  }
+}
+
+.cover-02{
+  display:none;
+}
+
+
+//title////////////////////////////////////////////////////////
+
+.pc-title-img{
+  display:none;
+  @media(min-width:500px){
+    display:block;
+  }
+}
+
+.sp-title-img{
+  text-align: right;
+  @media(min-width:500px){
+    display:none;
+  }
+}
+
+.top-cover__img{
+  height:40vh;
+  width:100%;
+  object-fit:cover;
+  object-position:0% 0%;
+  @media(min-width:500px){
+    height:unset;
+    object-fit:unset;
+    object-position:unset;
+  }
+}
+
+.title-container{
+  @media(min-width:500px){
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  }
+}
+
+.top-cover{
+  @media(min-width:500px){
+    margin-top: 30vh;
+  } 
+}
+
+
+
+
+
+
+//slider//////////////////////
+
+.slider-pro p{
+  writing-mode:vertical-rl;
+  height:50vh;
+  @media (min-width:550px){
+    font-size:20px;
+    height:35vh;
+  }
+}
+
+.heightFix{
+  overflow:hidden;
+  height:95vh;
+  @media (min-width:550px){
+    height:100vh;
+  }
+  position:relative;
+  margin-bottom:100px;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    margin: 0 auto;
+    text-align: center;
+    background-image: -webkit-linear-gradient(left, transparent, #777 25%, #777 75%, transparent);
+    background-image: linear-gradient(to right, transparent, #777 25%, #777 75%, transparent);
+}
+}
+
+//footer/////////////////////
+.pagetop-btn{
+  text-align:center;
+}
