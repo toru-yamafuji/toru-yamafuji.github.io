@@ -1,3 +1,5 @@
+//タブメニュー
+
 $(function(){
   $(".header-icon__ul li a").on("click", function() {
 
@@ -19,22 +21,16 @@ return false;
 });
 
 $(function(){
-  $(".albumlog-txt p a").on("click", function() {
+  $(".albumlog-txt a").on("click", function() {
   
-    $("#albumlog-area").hide();
+    $("#albumlog-area").fadeOut(300);
     $(".screen").hide();
     $(".header-icon__a").css('color','#dbdada');
-    
-            var speed = 500;
-        var href= $(this).attr("href");
-        var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top;
-        $("html, body").animate({scrollTop:position}, speed, "swing");
-        return false;
-    
 });
 });
 
+
+//スライダー
 
 $(function(){
   $('.my-slider').sliderPro({
@@ -53,19 +49,15 @@ $(function(){
           height: 'calc(100vw*3/4)',
           visibleSize: 'auto',
         },
-        
-//        960: {
-//            width: '100%',
-//            height:'60vh',
-//        }
-        
-      }
+    }
       
       
   });
 });
 
 
+
+//横スクロール
 
 $(function() {
         //スクロールスピード
@@ -83,23 +75,33 @@ $(function() {
 
 
 
+//waypoints-album
+  
 $(function(){
   $(".header-icon__ul li a").on("click", function() {
+    
+  
 
-  $(".album-01").waypoint({
-    handler: function() {$(".cover-img").fadeOut(300);  $(".cover-02").fadeIn(800);},
-    offset: "100%", horizontal:true, context: '.albumlog-txt'});
+  $(".album-sota__a").waypoint({
+    handler: function() {
+      $(".cover-img").hide();
+      $(".cover-sota").show();}, offset: "50%",horizontal:true,context: '.albumlog-txt'});
 
-  });
+  $(".album-india__a").waypoint({
+    handler: function() {
+      $(".cover-img").hide();
+      $(".cover-india").show();}, offset: "100%",horizontal:true,context: '.albumlog-txt'});
+
+  
+});
 });
 
 
 
-$(function(){
-
-$(".animated").waypoint({
+$(function() {
+  $(".animated").waypoint({
     handler: function(direction) {
-      if (direction === "down") {
+      if (direction === "down") { 
         $(this.element).addClass("fadeIn");
         this.destroy();
       }
@@ -108,3 +110,15 @@ $(".animated").waypoint({
   });
 });
 
+
+
+$(function(){
+$('a[href^=#]').click(function(){
+var speed = 500;
+var href= $(this).attr("href");
+var target = $(href == "#" || href == "" ? 'html' : href);
+var position = target.offset().top;
+$("html, body").animate({scrollTop:position}, speed, "swing");
+return false;
+});
+});

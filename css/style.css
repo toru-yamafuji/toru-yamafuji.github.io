@@ -122,6 +122,9 @@ h1 {
     writing-mode: vertical-rl;
     line-height: 3em;
     font-size: 2.2vh; }
+    @media (min-height: 800px) {
+      .profile-txt p {
+        font-size: 20px; } }
     .profile-txt p span {
       letter-spacing: 0.1em;
       font-size: 1.6vh; }
@@ -160,6 +163,8 @@ h1 {
   height: 50vh;
   overflow: scroll;
   padding-bottom: 10px;
+  display: flex;
+  flex-direction: row-reverse;
   /*スクロールバー全体*/
   /*スクロールバーの動く部分*/ }
   .albumlog-txt::-webkit-scrollbar {
@@ -168,20 +173,32 @@ h1 {
     background: #ddd; }
   .albumlog-txt::-webkit-scrollbar-thumb {
     background-color: #ccc; }
-  .albumlog-txt p {
+  .albumlog-txt p, .albumlog-txt h2 {
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
     line-height: 2.0em;
     font-size: 14px;
     font-size: 1.4rem;
     height: 95%; }
-    .albumlog-txt p span {
+    .albumlog-txt p span, .albumlog-txt h2 span {
       letter-spacing: 0.1em;
       font-size: 1.6vh; }
     @media (min-width: 500px) {
-      .albumlog-txt p {
+      .albumlog-txt p, .albumlog-txt h2 {
         font-size: 16px;
         font-size: 1.6rem; } }
+  .albumlog-txt a {
+    text-decoration: none;
+    color: #222;
+    border-right: dotted; }
+
+.albumlog-entry {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-left: 50vw; }
+  @media (min-width: 960px) {
+    .albumlog-entry {
+      padding-left: 480px; } }
 
 .albumlog-cover {
   text-align: center; }
@@ -224,38 +241,22 @@ h1 {
     flex-direction: row-reverse;
     justify-content: space-between; } }
 
-@media (min-width: 500px) {
-  .top-cover {
-    margin-top: 30vh; } }
+.top-cover {
+  margin-bottom: 500px; }
+  @media (min-width: 500px) {
+    .top-cover {
+      margin-top: 30vh; } }
 
 .slider-pro p {
   writing-mode: vertical-rl;
-  height: 50vh; }
+  height: 35vh; }
   @media (min-width: 550px) {
     .slider-pro p {
-      font-size: 20px;
-      height: 35vh; } }
+      font-size: 20px; } }
 
 .heightFix {
   overflow: hidden;
-  height: 95vh;
-  position: relative;
-  margin-bottom: 100px; }
-  @media (min-width: 550px) {
-    .heightFix {
-      height: 100vh; } }
-  .heightFix::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 1px;
-    margin: 0 auto;
-    text-align: center;
-    background-image: -webkit-linear-gradient(left, transparent, #777 25%, #777 75%, transparent);
-    background-image: linear-gradient(to right, transparent, #777 25%, #777 75%, transparent); }
+  height: 100vh; }
 
 .pagetop-btn {
   text-align: center; }
