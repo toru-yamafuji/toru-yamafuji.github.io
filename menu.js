@@ -157,8 +157,8 @@ $(function(){
 });
   
 
-$(window).scroll(function() {
-   var maxvh = $(window).outerHeight();
+$(window).bind('touchmove', function() {
    changeCss();
+   console.log('touch');
 });
 
