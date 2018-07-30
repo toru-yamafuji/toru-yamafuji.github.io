@@ -80,12 +80,15 @@ $(function() {
 $(function(){
   $(".header-icon__ul li a").on("click", function() {
     
-  
-
   $(".album-sota__a").waypoint({
     handler: function() {
       $(".cover-img").hide();
       $(".cover-sota").show();}, offset: "50%",horizontal:true,context: '.albumlog-txt'});
+
+　$(".album-taiwan__a").waypoint({
+    handler: function() {
+      $(".cover-img").hide();
+      $(".cover-taiwan").show();}, offset: "50%",horizontal:true,context: '.albumlog-txt'});
 
   $(".album-india__a").waypoint({
     handler: function() {
