@@ -75,7 +75,7 @@ $(function() {
 
 
 
-//waypoints-album
+//waypoints-アルバムカバー切替
   
 $(function(){
   $(".header-icon__ul li a").on("click", function() {
@@ -100,6 +100,7 @@ $(function(){
 });
 
 
+//waypoints+animate.css
 
 $(function() {
   $(".animated").waypoint({
@@ -114,6 +115,7 @@ $(function() {
 });
 
 
+//ページ内リンクスムーズスクロール
 
 $(function(){
 $('a[href^=#]').click(function(){
@@ -126,3 +128,13 @@ return false;
 });
 });
 
+
+
+//view height取得(safari対応)
+
+$(function(){
+ var maxvh = $(window).outerHeight();
+ $('.top-cover__img').css('height',maxvh*0.4+'px');
+ $('h1').css('height',maxvh*0.52+'px');
+ 
+});
