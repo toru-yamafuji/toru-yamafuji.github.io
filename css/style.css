@@ -249,14 +249,30 @@ h1 {
 
 .slider-pro p {
   writing-mode: vertical-rl;
-  height: 35vh; }
+  height: 50vh; }
   @media (min-width: 550px) {
     .slider-pro p {
-      font-size: 20px; } }
+      font-size: 20px;
+      height: 35vh; } }
 
 .heightFix {
   overflow: hidden;
-  height: 100vh; }
+  height: 95vh;
+  margin-bottom: 200px; }
+  @media (min-width: 550px) {
+    .heightFix {
+      height: 100vh; } }
+  .heightFix::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 1px;
+    text-align: center;
+    background-image: linear-gradient(to right, transparent, #777777 25%, #777777 75%, transparent);
+    margin: 0px auto; }
 
 .pagetop-btn {
   text-align: center; }
