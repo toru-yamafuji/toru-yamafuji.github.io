@@ -259,15 +259,36 @@ h1{
 }
 
 .albumlog-entry{
-   display: flex;
+  position:relative;
+  display: flex;
   flex-direction: row-reverse;
   padding-left:100px;
   &:last-child{
     padding-left:200px;
+    
   }
   @media(min-width:960px){
-    padding-left:480px;
+    padding-left:230px;
   }
+  
+  &::after {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100px; 
+  height: 1px;
+  content: '';
+}
+
+  &:last-child::after {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 200px; 
+  height: 1px;
+  content: '';
+}
+  
   
 }
 
