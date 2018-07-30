@@ -134,12 +134,8 @@ return false;
 
 //view height取得(safari対応)
 
-$(function(){
- var maxvh = $(window).outerHeight();
-// .header-icon__ul height 6vh
-// .header-icon__ul margin-top 2vh
-// h1 padding-top 8vh
-
+function changeCss(){
+var maxvh = $(window).outerHeight();
  $('.header-icon__ul').css({height:maxvh*0.06+'px', 'margin-top':maxvh*0.02+'px'});
  $('h1').css({height:maxvh*0.52+'px','padding-top':maxvh*0.08+'px'});
  $('.container').css({height:maxvh*0.96+'px',top:maxvh*0.02+'px',bottom:maxvh*0.02+'px'});
@@ -154,11 +150,15 @@ $(function(){
  $('.top-cover__img').css({height:maxvh*0.4+'px'});
  $('.slider-pro p').css({height:maxvh*0.5+'px'});
  $('.heightFix').css({height:maxvh*0.95+'px'});
- 
- $(window).scroll(function() {
+};
+
+$(function(){
+  changeCss();
+});
+  
+
+$(window).scroll(function() {
    var maxvh = $(window).outerHeight();
+   changeCss();
 });
- 
 
-
-});
