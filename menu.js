@@ -155,6 +155,9 @@ $(function(){
  $('.slider-pro p').css({height:maxvh*0.5+'px'});
  $('.heightFix').css({height:maxvh*0.95+'px'});
  
+ $(window).scroll(function() {
+   var maxvh = $(window).outerHeight();
+});
  
 
 
