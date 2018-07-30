@@ -136,5 +136,6 @@ $(function(){
  var maxvh = $(window).outerHeight();
  $('.top-cover__img').css('height',maxvh*0.4+'px');
  $('h1').css('height',maxvh*0.52+'px');
- 
+ $('.container').css('height',maxvh*0.96+'px');
+
 });

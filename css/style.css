@@ -195,7 +195,9 @@ h1 {
 .albumlog-entry {
   display: flex;
   flex-direction: row-reverse;
-  padding-left: 50vw; }
+  padding-left: 100px; }
+  .albumlog-entry:last-child {
+    padding-left: 200px; }
   @media (min-width: 960px) {
     .albumlog-entry {
       padding-left: 480px; } }
