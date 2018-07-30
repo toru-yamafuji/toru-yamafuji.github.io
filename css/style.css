@@ -209,13 +209,8 @@ h1 {
     width: 100px;
     height: 1px;
     content: ''; }
-  .albumlog-entry:last-child::after {
-    position: absolute;
-    top: 0;
-    left: 0%;
-    width: 200px;
-    height: 1px;
-    content: ''; }
+  .albumlog-entry:last-child:after {
+    width: 200px; }
 
 .albumlog-cover {
   text-align: center; }

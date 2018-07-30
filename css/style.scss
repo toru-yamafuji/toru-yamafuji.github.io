@@ -280,13 +280,8 @@ h1{
   content: '';
 }
 
-  &:last-child::after {
-  position: absolute;
-  top: 0;
-  left: 0%;
+  &:last-child:after {
   width: 200px; 
-  height: 1px;
-  content: '';
 }
   
   
