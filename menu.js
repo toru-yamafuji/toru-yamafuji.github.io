@@ -145,7 +145,6 @@ $('.sp-profile-img__img').css({height:maxvh*0.25+'px','margin-top':maxvh*0.03+'p
 $('.profile-txt p span').css({'font-size':maxvh*0.016+'px'});
 $('.albumlog-content').css({'padding-top':maxvh*0.06+'px','padding-bottom':maxvh*0.03+'px'});
 $('.albumlog-txt').css({'margin-top':maxvh*0.01+'px','margin-bottom':maxvh*0.01+'px',height:maxvh*0.50+'px'});
-$('.albumlog-txt p, .albumlog-txt h2').css({'font-size':maxvh*0.016+'px'});
 $('.cover-box').css({height:maxvh*0.28+'px'});
 $('.top-cover__img').css({height:maxvh*0.4+'px'});
 console.log('cssChanged');
