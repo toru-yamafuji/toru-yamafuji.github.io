@@ -134,36 +134,27 @@ return false;
 
 //view height取得(safari対応)
 
-// function changeCss(){
-//var maxvh = $(window).outerHeight();
-//console.log(maxvh);
-// $('.header-icon__ul').css({height:maxvh*0.06+'px', 'margin-top':maxvh*0.02+'px'});
-// $('h1').css({height:maxvh*0.52+'px','padding-top':maxvh*0.08+'px'});
-// $('.container').css({height:maxvh*0.96+'px',top:maxvh*0.02+'px',bottom:maxvh*0.02+'px'});
-// $('.profile-content').css({height:maxvh*0.9+'px','margin-top':maxvh*0.06+'px'});
-// $('.sp-profile-img__img').css({height:maxvh*0.25+'px','margin-top':maxvh*0.03+'px'});
-// $('.profile-txt p span').css({'font-size':maxvh*0.016+'px'});
-// $('.albumlog-content').css({'padding-top':maxvh*0.06+'px','padding-bottom':maxvh*0.03+'px'});
-// $('.albumlog-txt').css({'margin-top':maxvh*0.01+'px','margin-bottom':maxvh*0.01+'px',height:maxvh*0.50+'px'});
-// $('.albumlog-txt p, .albumlog-txt h2').css({'font-size':maxvh*0.016+'px'});
-// $('.cover-box').css({height:maxvh*0.28+'px'});
-// $('.top-cover__img').css({height:maxvh*0.4+'px'});
-// $('.slider-pro p').css({height:maxvh*0.5+'px'});
-// $('.heightFix').css({height:maxvh*0.95+'px'});
-//console.log('cssChanged');
-//};
+function changeCss(){
+var maxvh = $(window).outerHeight();
+console.log(maxvh);
+$('.header-icon__ul').css({height:maxvh*0.06+'px', 'margin-top':maxvh*0.02+'px'});
+$('h1').css({height:maxvh*0.52+'px','padding-top':maxvh*0.08+'px'});
+$('.container').css({height:maxvh*0.96+'px',top:maxvh*0.02+'px',bottom:maxvh*0.02+'px'});
+$('.profile-content').css({height:maxvh*0.9+'px','margin-top':maxvh*0.06+'px'});
+$('.sp-profile-img__img').css({height:maxvh*0.25+'px','margin-top':maxvh*0.03+'px'});
+$('.profile-txt p span').css({'font-size':maxvh*0.016+'px'});
+$('.albumlog-content').css({'padding-top':maxvh*0.06+'px','padding-bottom':maxvh*0.03+'px'});
+$('.albumlog-txt').css({'margin-top':maxvh*0.01+'px','margin-bottom':maxvh*0.01+'px',height:maxvh*0.50+'px'});
+$('.albumlog-txt p, .albumlog-txt h2').css({'font-size':maxvh*0.016+'px'});
+$('.cover-box').css({height:maxvh*0.28+'px'});
+$('.top-cover__img').css({height:maxvh*0.4+'px'});
+console.log('cssChanged');
+};
 
-//$(function(){
-//	var agent = navigator.userAgent;
-//	if(agent.search(/iPhone/) != -1 || agent.search(/iPad/) != -1 || agent.search(/iPod/) != -1 ){
-//	  $(window).resize(function() {
-//	     console.log('resized');
-//       setTimeout(function() {
-//       changeCss();
-//    }, 200);
-//  });
-//  }
-//});
+$(function(){
+	var agent = navigator.userAgent;
+	if(agent.search(/iPhone/) != -1 || agent.search(/iPad/) != -1 || agent.search(/iPod/) != -1 ){
+      changeCss();
+  }
+});
 
-
-window.viewportUnitsBuggyfill.init();
