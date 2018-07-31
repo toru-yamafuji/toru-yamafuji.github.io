@@ -190,9 +190,13 @@ h1 {
         font-size: 1.6rem; } }
   .albumlog-txt p {
     padding-left: 20vw; }
+    .albumlog-txt p:last-child {
+      padding-left: 40vw; }
     @media (min-width: 960px) {
       .albumlog-txt p {
-        padding-left: 230px; } }
+        padding-left: 230px; }
+        .albumlog-txt p:last-child {
+          padding-left: 460px; } }
   .albumlog-txt a {
     text-decoration: none;
     color: #222;

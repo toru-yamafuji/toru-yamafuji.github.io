@@ -255,9 +255,16 @@ h1{
   
   p{
    padding-left:20vw;
+   &:last-child{
+     padding-left:40vw;
+   }
    @media(min-width:960px){
      padding-left:230px;
+     &:last-child{
+       padding-left:460px;
+     }
    }
+
   }
   
   a{
