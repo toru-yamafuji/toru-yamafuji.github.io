@@ -135,7 +135,7 @@ return false;
 //view height取得(safari対応)
 
 function changeCss(){
-var maxvh = $(window).innerHeight();
+var maxvh = $(window).outerHeight();
 console.log(maxvh);
  $('.header-icon__ul').css({height:maxvh*0.06+'px', 'margin-top':maxvh*0.02+'px'});
  $('h1').css({height:maxvh*0.52+'px','padding-top':maxvh*0.08+'px'});
@@ -151,6 +151,7 @@ console.log(maxvh);
  $('.top-cover__img').css({height:maxvh*0.4+'px'});
  $('.slider-pro p').css({height:maxvh*0.5+'px'});
  $('.heightFix').css({height:maxvh*0.95+'px'});
+console.log('cssChanged');
 };
 
 $(function(){
