@@ -157,12 +157,9 @@ $(function(){
 	var agent = navigator.userAgent;
 	if(agent.search(/iPhone/) != -1 || agent.search(/iPad/) != -1 || agent.search(/iPod/) != -1 ){
 	  $(window).resize(function() {
-    if (timer !== false) {
-        clearTimeout(timer);
-    }
-    timer = setTimeout(function() {
-        console.log('resized');
-        changeCss();
+	     console.log('resized');
+       setTimeout(function() {
+       changeCss();
     }, 200);
   });
   }
