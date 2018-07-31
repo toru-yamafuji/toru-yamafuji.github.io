@@ -218,7 +218,7 @@ h1{
 .albumlog-txt{
     margin: 1vh 2vw;
     height: 50vh;
-    overflow: scroll;
+    overflow: auto;
     padding-bottom:10px;
     display: flex;
     flex-direction: row-reverse;
