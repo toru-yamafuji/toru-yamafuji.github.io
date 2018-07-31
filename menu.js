@@ -135,7 +135,7 @@ return false;
 //view height取得(safari対応)
 
 function changeCss(){
-var maxvh = $(window).outerHeight();
+var maxvh = $(window).innerHeight();
 console.log(maxvh);
  $('.header-icon__ul').css({height:maxvh*0.06+'px', 'margin-top':maxvh*0.02+'px'});
  $('h1').css({height:maxvh*0.52+'px','padding-top':maxvh*0.08+'px'});
@@ -154,12 +154,18 @@ console.log(maxvh);
 };
 
 $(function(){
-  changeCss();
+	var agent = navigator.userAgent;
+	if(agent.search(/iPhone/) != -1 || agent.search(/iPad/) != -1 || agent.search(/iPod/) != -1 ){
+	  $(window).resize(function() {
+    if (timer !== false) {
+        clearTimeout(timer);
+    }
+    timer = setTimeout(function() {
+        console.log('resized');
+        changeCss();
+    }, 200);
+  });
+  }
 });
-  
 
-$(window).bind('touchmove', function() {
-   changeCss();
-   console.log('touch');
-});
 
