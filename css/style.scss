@@ -250,6 +250,13 @@ h1{
     }
   }
   
+  p{
+   padding-left:20vw;
+   @media(min-width:960px){
+     padding-left:230px;
+   }
+  }
+  
   a{
     text-decoration:none;
     color:#222;
@@ -262,30 +269,13 @@ h1{
   position:relative;
   display: flex;
   flex-direction: row-reverse;
-  padding-left:100px;
   &:last-child{
-    padding-left:200px;
-    
+    padding-left:20vw;
   }
-  @media(min-width:960px){
-    padding-left:230px;
-  }
-  
-  &::after {
-  position: absolute;
-  top: 0;
-  left: 0%;
-  width: 100px; 
-  height: 1px;
-  content: '';
 }
+  
+  
 
-  &:last-child:after {
-  width: 200px; 
-}
-  
-  
-}
 
 .albumlog-cover{
   text-align:center;

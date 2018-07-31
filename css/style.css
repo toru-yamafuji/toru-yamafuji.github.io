@@ -187,6 +187,11 @@ h1 {
       .albumlog-txt p, .albumlog-txt h2 {
         font-size: 16px;
         font-size: 1.6rem; } }
+  .albumlog-txt p {
+    padding-left: 20vw; }
+    @media (min-width: 960px) {
+      .albumlog-txt p {
+        padding-left: 230px; } }
   .albumlog-txt a {
     text-decoration: none;
     color: #222;
@@ -195,22 +200,9 @@ h1 {
 .albumlog-entry {
   position: relative;
   display: flex;
-  flex-direction: row-reverse;
-  padding-left: 100px; }
+  flex-direction: row-reverse; }
   .albumlog-entry:last-child {
-    padding-left: 200px; }
-  @media (min-width: 960px) {
-    .albumlog-entry {
-      padding-left: 230px; } }
-  .albumlog-entry::after {
-    position: absolute;
-    top: 0;
-    left: 0%;
-    width: 100px;
-    height: 1px;
-    content: ''; }
-  .albumlog-entry:last-child:after {
-    width: 200px; }
+    padding-left: 20vw; }
 
 .albumlog-cover {
   text-align: center; }

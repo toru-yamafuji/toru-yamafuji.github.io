@@ -136,6 +136,7 @@ return false;
 
 function changeCss(){
 var maxvh = $(window).outerHeight();
+console.log(maxvh);
  $('.header-icon__ul').css({height:maxvh*0.06+'px', 'margin-top':maxvh*0.02+'px'});
  $('h1').css({height:maxvh*0.52+'px','padding-top':maxvh*0.08+'px'});
  $('.container').css({height:maxvh*0.96+'px',top:maxvh*0.02+'px',bottom:maxvh*0.02+'px'});
